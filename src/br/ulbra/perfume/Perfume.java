@@ -27,5 +27,36 @@ public class Perfume {
         }
         return perfume;
     }
-    
+    public void alterar(int indice, String novoNome){
+            if (!basePerfume.isEmpty()){
+                if(indice>=0 && indice<basePerfume.size()){
+                    basePerfume.set(indice, novoNome);
+              JOptionPane.showMessageDialog(null, 
+                      "Perfume alterado com sucesso! ");
+                }else{
+                    JOptionPane.showMessageDialog(null, 
+                      "Perfume não existe ");
+                }
+            }else{JOptionPane.showMessageDialog(null, 
+                      "Lista vazia! ");}        
+    }
+    public void excluir(int indice){
+            if (!basePerfume.isEmpty()){
+                if(indice>=0 && indice<basePerfume.size()){
+                    basePerfume.remove(indice);
+              JOptionPane.showMessageDialog(null, 
+                      "Perfume excluido com sucesso! ");
+                }else{
+                    JOptionPane.showMessageDialog(null, 
+                      "Perfume não existe ");
+                }
+            }else{JOptionPane.showMessageDialog(null, 
+                      "Lista vazia! ");}        
+    }
 }
+
+
+
+
+
+
